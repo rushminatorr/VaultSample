@@ -1,0 +1,20 @@
+group 'VaultSample'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.springframework.vault:spring-vault-core:1.0.2.RELEASE'
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+jar {
+    baseName = 'just-cause'
+    version =  '0.1.0'
+}

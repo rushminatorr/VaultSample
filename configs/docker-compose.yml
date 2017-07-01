@@ -1,0 +1,35 @@
+version: "3"
+services:
+  consul:
+    container_name: consul
+    command: agent -server -bind 0.0.0.0 -client 0.0.0.0 -bootstrap-expect=1 -http-port=8500 -log-level=info -ui
+    image: consul:latest
+    hostname: "consul"
+    volumes:
+      - ./etc/consul/config:/consul/config
+    ports:
+      - "8500:8500"
+      - "9300:9300"
+    expose:
+       - "8500"
+  vault:
+    container_name: vault
+    image: vault
+    hostname: "vault"
+    links:
+       - consul
+    ports:
+       - "8300:8300"
+    expose:
+       - "8300"
+    volumes:
+      - ./etc/vault/config:/vault/config
+    cap_add:
+      - IPC_LOCK
+    environment:
+       - VAULT_DEV_ROOT_TOKEN_ID=devroot
+       - SKIP_SETCAP=true
+       - VAULT_ADDR=http://127.0.0.1:8300
+    command: server -log-level=debug -dev
+
+
