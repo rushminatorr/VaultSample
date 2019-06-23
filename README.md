@@ -1,4 +1,6 @@
+# ~~Tilder Works~~
 # VaultSample
+
 
 A simple java project using Spring Vault to demonstrate secret storage in Vault with Consul backend.
 
@@ -25,4 +27,4 @@ A simple gradle Java project then uses the vault endpoints to use the deployed v
 [spring]: http://docs.spring.io/spring-vault/docs/1.0.2.RELEASE/reference/html/#get-started:first-steps:vault
 [vault]: https://www.vaultproject.io/docs/configuration/index.html
 
-~~Tilder Works~~
+
