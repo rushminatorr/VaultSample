@@ -24,3 +24,5 @@ A simple gradle Java project then uses the vault endpoints to use the deployed v
 [consul]: https://www.consul.io/docs/commands/index.html
 [spring]: http://docs.spring.io/spring-vault/docs/1.0.2.RELEASE/reference/html/#get-started:first-steps:vault
 [vault]: https://www.vaultproject.io/docs/configuration/index.html
+
+~~Tilder Works~~
